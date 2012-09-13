@@ -1,7 +1,9 @@
 /*
  * FixedSizeStringBuilder.cxx:
  *
- * Author(s): objectx
+ * Copyright 2012 Masashi Fujita
+ *
+ * License: Ms-Pl (http://www.opensource.org/licenses/ms-pl.html)
  */
 
 #include <algorithm>
@@ -40,8 +42,8 @@ FixedSizeStringBuilder &	FixedSizeStringBuilder::Append (const void * s, size_t 
 
 FixedSizeStringBuilder &	FixedSizeStringBuilder::AppendWithFormatV (const char * format, va_list ap) {
     size_t	room = limit_ + 1 - length_ ;
-    size_t	len = vsnprintf (reinterpret_cast<char *> (buffer_ + length_), room, format, ap);
-    if (len < 0 || room < (len + 1)) {
+    int_fast32_t	len = vsnprintf (reinterpret_cast<char *> (buffer_ + length_), room, format, ap);
+    if (len < 0 || room < static_cast<size_t> (len + 1)) {
 	// Truncation occured.
 	length_ = limit_ ;
     }
