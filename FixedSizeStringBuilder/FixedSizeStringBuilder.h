@@ -122,12 +122,6 @@ public:
     operator const char * () const {
 	return GetValue () ;
     }
-    FixedSizeStringBuilder &	operator += (char ch) {
-	return Append (ch) ;
-    }
-    FixedSizeStringBuilder &	operator += (const char *s) {
-	return Append (s) ;
-    }
 } ;
 
 #endif	/* fixedsizestringbuilder_h__d43f78424aa06df003508b9080ed6513 */
