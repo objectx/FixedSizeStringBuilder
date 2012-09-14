@@ -29,6 +29,20 @@ private:
     int8_t *	buffer_;
     int32_t	limit_;
     int32_t	length_;
+private:
+    /**
+     * Disables copying.
+     */
+    FixedSizeStringBuilder ()
+       : buffer_ (0), limit_ (0), length_ (0) {
+	/* NO-OP */
+    }
+    /**
+     * Disables copying.
+     */
+    FixedSizeStringBuilder &	operator = (const FixedSizeStringBuilder &src) {
+	/* NO-OP */
+    }
 public:
     ~FixedSizeStringBuilder () {
 	/* NO-OP */
@@ -69,6 +83,11 @@ public:
     size_t	GetLength () const {
 	return static_cast<size_t> (length_);
     }
+    /**
+     * Clear the constructed string.
+     *
+     * @return *this
+     */
     FixedSizeStringBuilder & Clear () {
 	length_ = 0;
 	buffer_ [0] = 0;
@@ -83,7 +102,7 @@ public:
      */
     FixedSizeStringBuilder &	Append (char ch);
     /**
-     * Append a \0 terminated string
+     * Append a \0 terminated string.
      *
      * @param s String to append
      *
@@ -91,12 +110,14 @@ public:
      */
     FixedSizeStringBuilder &	Append (const char * s);
     /**
-     * Append a LENGTH byte characters from S
+     * Append a LENGTH byte characters from S.
      *
      * @param s Source
-     * @param length
+     * @param length # of bytes to add.
      *
      * @return *this (for chaining).
+     *
+     * @remarks s [0..length] must not contain \0.
      */
     FixedSizeStringBuilder &	Append (const void * s, size_t length);
     /**
@@ -106,11 +127,10 @@ public:
      * @param ap Arguments
      *
      * @return *this (for chaining)
-     * @remarks s [0..length] must not contain \0.
      */
     FixedSizeStringBuilder &	AppendWithFormatV (const char *format, va_list ap);
     /**
-     * APpend with formatting
+     * Append with formatting.
      *
      * @param format The format string
      *
