@@ -40,8 +40,8 @@ private:
     /**
      * Disables copying.
      */
-    FixedSizeStringBuilder &	operator = (const FixedSizeStringBuilder &src) {
-	/* NO-OP */
+    FixedSizeStringBuilder &	operator = (const FixedSizeStringBuilder &) {
+        return *this ;
     }
 public:
     ~FixedSizeStringBuilder () {
