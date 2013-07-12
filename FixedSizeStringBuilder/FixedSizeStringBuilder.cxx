@@ -1,9 +1,9 @@
 /*
  * FixedSizeStringBuilder.cxx:
  *
- * Copyright 2012 Masashi Fujita
+ * Copyright 2012 Masashi Fujita <objectxtreme@gmail.com>
  *
- * License: Ms-Pl (http://www.opensource.org/licenses/ms-pl.html)
+ * License: Ms-PL (http://www.opensource.org/licenses/ms-pl.html)
  */
 
 #include <algorithm>
