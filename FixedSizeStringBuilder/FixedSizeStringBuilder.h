@@ -1,9 +1,9 @@
 /*
  * FixedSizeStringBuilder.h:
  *
- * Copyright 2012 Masashi Fujita
+ * Copyright 2012 Masashi Fujita <objectxtreme@gmail.com>
  *
- * License: Ms-Pl (http://www.opensource.org/licenses/ms-pl.html)
+ * License: Ms-PL (http://www.opensource.org/licenses/ms-pl.html)
  */
 
 #ifndef	fixedsizestringbuilder_h__d43f78424aa06df003508b9080ed6513
