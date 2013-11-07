@@ -1,8 +1,7 @@
 FixedSizeStringBuilder
 ===
 
-
-Constructs a string onto the supplied fixed sized buffer.
+Constructs a string onto the supplied fixed sized buffer
 
 License: [Ms-PL][]
 
