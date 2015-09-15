@@ -5,7 +5,7 @@
  */
 
 #include "common.h"
-#include "FixedSizeStringBuilder.h"
+#include "FixedSizeStringBuilder.hpp"
 
 static void	test () {
     {

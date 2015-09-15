@@ -1,23 +1,20 @@
 /*
- * FixedSizeStringBuilder.h:
+ * FixedSizeStringBuilder.hpp:
  *
- * Copyright 2012 Masashi Fujita <objectxtreme@gmail.com>
+ * Copyright 2012-2015 Masashi Fujita <objectxtreme@gmail.com>
  *
  * License: Ms-PL (http://www.opensource.org/licenses/ms-pl.html)
  */
+#pragma once
 
-#ifndef	fixedsizestringbuilder_h__d43f78424aa06df003508b9080ed6513
-#define	fixedsizestringbuilder_h__d43f78424aa06df003508b9080ed6513	1
-
-#if defined (_MSC_VER) && (1300 <= _MSC_VER)
-#   pragma once
-#endif
+#ifndef	fixedsizestringbuilder_hpp_75796D93_593C_4AC6_A9E6_0430388DB301
+#define	fixedsizestringbuilder_hpp_75796D93_593C_4AC6_A9E6_0430388DB301
 
 #include <sys/types.h>
-#include <assert.h>
-#include <stdarg.h>
-#include <stdint.h>
-#include <string.h>
+#include <cassert>
+#include <cstdarg>
+#include <cstdint>
+#include <cstring>
 
 /**
  * Constructs a string into fixed sized buffer.
@@ -144,7 +141,7 @@ public:
     }
 } ;
 
-#endif	/* fixedsizestringbuilder_h__d43f78424aa06df003508b9080ed6513 */
+#endif  /* fixedsizestringbuilder_hpp_75796D93_593C_4AC6_A9E6_0430388DB301 */
 /*
  * [END OF FILE]
  */

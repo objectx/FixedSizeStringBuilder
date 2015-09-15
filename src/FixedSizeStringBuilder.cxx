@@ -1,13 +1,13 @@
 /*
  * FixedSizeStringBuilder.cxx:
  *
- * Copyright 2012 Masashi Fujita <objectxtreme@gmail.com>
+ * Copyright 2012-2015 Masashi Fujita <objectxtreme@gmail.com>
  *
  * License: Ms-PL (http://www.opensource.org/licenses/ms-pl.html)
  */
 
 #include <algorithm>
-#include "FixedSizeStringBuilder.h"
+#include "FixedSizeStringBuilder.hpp"
 
 FixedSizeStringBuilder &	FixedSizeStringBuilder::Append (char ch) {
     if ((length_ + 1) <= limit_) {
