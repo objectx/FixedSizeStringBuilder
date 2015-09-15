@@ -15,7 +15,8 @@ setvar_default (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 setvar_default (CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 setvar_default (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 
-message ("bin: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+include (cotire)
+include (EnableCatch)
 
 enable_testing ()
 
